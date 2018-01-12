@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">DX Bank</string>
+    <string name="quickstart_message">Your Account Balance:</string>
+    <string name="preferences_message">Select your Communication Preferences</string>
+    <string name="send_push_message">Push Notifications  </string>
+    <string name="send_sms_message">SMS  </string>
+    <string name="send_email_message">E-Mail  </string>
+    <string name="preferences">Set Preferences</string>
+    <string name="sign_out">Sign Out</string>
+
+    <string name="msg_subscribed">Subscribed to news topic</string>
+    <string name="msg_token_fmt" translatable="false">InstanceID Token: %s</string>
+
+    <string name="default_notification_channel_id" translatable="false">fcm_default_channel</string>
+    <!--
+        This is the name that users will see when interacting with this channel.
+        It should describe the category of notifications that will be sent through this channel
+     -->
+    <string name="default_notification_channel_name" translatable="true">News</string>
+    <string name="push_token">Push Token</string>
+</resources>
