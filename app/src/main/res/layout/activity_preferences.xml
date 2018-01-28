@@ -22,8 +22,9 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:gravity="center_horizontal"
-        android:paddingVertical="20dp"
-        android:text="@string/preferences_message" />
+        android:paddingVertical="50dp"
+        android:text="@string/preferences_message"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
     <CheckBox
         android:id="@+id/check_push"
@@ -31,7 +32,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:gravity="center_horizontal"
-        android:paddingVertical="20dp"
-        android:text="@string/send_push_message" />
+        android:paddingVertical="3dp"
+        android:text="@string/send_push_message"
+        android:textSize="18sp" />
 
 </LinearLayout>

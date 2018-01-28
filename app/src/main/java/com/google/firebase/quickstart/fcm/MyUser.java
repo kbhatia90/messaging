@@ -9,27 +9,10 @@ public class MyUser {
     private String userDeviceToken;
     private String userName;
     private boolean pushPreference;
-
-    public int getUserAccountBalance() {
-        return userAccountBalance;
-    }
-
-    public void setUserAccountBalance(int userAccountBalance) {
-        this.userAccountBalance = userAccountBalance;
-    }
-
     private int userAccountBalance;
 
     public MyUser() {
     }
-
-    /*public MyUser(String userDeviceToken, String userName, boolean pushPreference){
-
-        this.userDeviceToken = userDeviceToken;
-        this.userName = userName;
-        this.pushPreference = pushPreference;
-
-    }*/
     public MyUser(String userDeviceToken, String userName, boolean pushPreference, int userAccountBalance){
 
         this.userDeviceToken = userDeviceToken;
@@ -42,14 +25,13 @@ public class MyUser {
     public String getUserDeviceToken() {
         return userDeviceToken;
     }
-
     public void setUserDeviceToken(String userDeviceToken) {
         this.userDeviceToken = userDeviceToken;
     }
+
     public String getUserName() {
         return userName;
     }
-
     public void setUserName(String userName) {
         this.userName = userName;
     }
@@ -59,6 +41,13 @@ public class MyUser {
     }
     public void setPushPreference(boolean pushPreference){
         this.pushPreference = pushPreference;
+    }
+
+    public int getUserAccountBalance() {
+        return userAccountBalance;
+    }
+    public void setUserAccountBalance(int userAccountBalance) {
+        this.userAccountBalance = userAccountBalance;
     }
 
 }

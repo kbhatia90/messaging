@@ -22,14 +22,18 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:gravity="center_horizontal"
-        android:text="@string/quickstart_message" />
+        android:text="@string/quickstart_message"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title" />
 
     <TextView
         android:id="@+id/balanceTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:gravity="center_horizontal" />
+        android:gravity="center_horizontal"
+        android:paddingVertical="20dp"
+        android:textAppearance="@android:style/TextAppearance.Holo.Large"
+        android:textSize="50sp" />
 
     <Button
         android:id="@+id/preferencesButton"
@@ -37,12 +41,5 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:text="@string/preferences" />
-
-    <Button
-        android:id="@+id/pushTokenButton"
-        android:layout_width="@dimen/standard_field_width"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:text="@string/push_token"/>
 
 </LinearLayout>

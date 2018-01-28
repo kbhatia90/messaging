@@ -28,24 +28,16 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.firebase.ui.auth.AuthUI;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
-import com.google.firebase.iid.FirebaseInstanceId;
-
-import java.util.Map;
 
 public class PreferencesActivity extends AppCompatActivity {
 
-    // Firebase variables
     private FirebaseDatabase mFirebaseDatabase;
     private DatabaseReference mFirebaseDatabaseReference;
     private FirebaseAuth mFirebaseAuth;
@@ -86,15 +78,7 @@ public class PreferencesActivity extends AppCompatActivity {
 
             }
         };
-
-
-
-
     }
-
-
-
-
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data){
         super.onActivityResult(requestCode,resultCode,data);
@@ -144,8 +128,6 @@ public class PreferencesActivity extends AppCompatActivity {
         mFirebaseDatabaseReference = mFirebaseDatabase.getReference().child("users/"+userId);
         CheckBox pushCheck = findViewById(R.id.check_push);
 
-
-
         if (MainActivity.pushPreference){
             pushCheck.setChecked(true);
         }
@@ -155,38 +137,6 @@ public class PreferencesActivity extends AppCompatActivity {
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 MainActivity.pushPreference = b;
                 mFirebaseDatabaseReference.child("pushPreference").setValue(MainActivity.pushPreference);
-                /*if(b){
-                    pushPreference = true;
-                }
-                else{
-                    pushPreference = false;
-                }*/
-                //String token = FirebaseInstanceId.getInstance().getToken();
-                //MyUser myUser = new MyUser(FirebaseInstanceId.getInstance().getId().toString(),FirebaseInstanceId.getInstance().getToken().toString(),MainActivity.mUserName, pushPreference,MainActivity.accountBalance);
-                //mFirebaseDatabaseReference.push().setValue(myUser);
-
-
-                /*mFirebaseDatabaseReference.addValueEventListener(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(DataSnapshot dataSnapshot) {
-                        //TextView balView = (TextView) findViewById(R.id.balanceTextView);
-                        //String accountBalance = "";
-                        //for(DataSnapshot snapshot : dataSnapshot.getChildren()){
-                            //MyUser user = snapshot.getValue(MyUser.class);
-                            //if(user.getUserName().equalsIgnoreCase(mFirebaseAuth.getCurrentUser().getDisplayName()))
-
-                            //String node = snapshot.getKey();
-                            mFirebaseDatabaseReference.child(userId).child("pushPreference").setValue(MainActivity.pushPreference);
-
-                        //}
-
-                    }
-                    @Override
-                    public void onCancelled(DatabaseError databaseError) {
-
-                    }
-                });*/
-
             }
         });
     }
